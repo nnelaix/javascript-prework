@@ -1,21 +1,21 @@
-function printMessage(msg){
-	let div = document.createElement('div');
-	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
+// komputer
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+console.log('Wylosowana liczba to: ' + randomNumber);
+
+let computerMove = 'nieznany ruch';
+
+if(randomNumber == 1){
+  computerMove = 'kamień';
+} else if (randomNumber == 2){
+	computerMove = 'papier';
+} else if (randomNumber == 3){
+	computerMove = 'nożyce';
 }
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
-}
+printMessage('Mój ruch to: ' + computerMove);
 
-let computerMove = `kamień`;
-
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
-
-let playerMove = 'papier'; 
-
-printMessage('Zagrałem' + playerMove);
-
+// gracz
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -33,21 +33,6 @@ if(playerInput == '1'){
 
 printMessage('Twój ruch to: ' + playerMove);
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-console.log('Wylosowana liczba to: ' + randomNumber);
-
-let computerMove = 'nieznany ruch';
-
-if(randomNumber == 1){
-  computerMove = 'kamień';
-} else if (randomNumber == 2){
-	computerMove = 'papier';
-} else if (randomNumber == 3){
-	computerMove = 'nożyce';
-}
-
-printMessage('Mój ruch to: ' + computerMove);
 
 if(computerMove == 'kamień' && playerMove == 'papier'){
 	printMessage('Ty wygrywasz!');
