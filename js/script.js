@@ -1,4 +1,5 @@
-function playGame(playerInput){
+{
+	function playGame(playerInput){
 	
 		clearMessages(); 
 
@@ -76,31 +77,27 @@ function playGame(playerInput){
 			printMessage('Przegrałeś!');
 		} else if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
 			printMessage('Remis!');
-		} else if(argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
+		} else {
 			printMessage('Błędna wartość. Wpisz numer 1, 2 lub 3');
-		} else if(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
-			printMessage('Błędna wartość. Wpisz numer 1, 2 lub 3');
-		} else if(argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
-			printMessage('Błędna wartość. Wpisz numer 1, 2 lub 3');
+		
 		} 
 	}
 
 	printMessage('WYNIK: ' + displayResult(computerMove, playerMove));
+	  
+	  
+	  
+	}
 
 	document.getElementById('play-rock').addEventListener('click', function(){
 		playGame(1);
-	  });
-
-	document.getElementById('play-paper).addEventListener('click', function(){
-		playGame(2);
 	  });
 
 	document.getElementById('play-scissors').addEventListener('click', function(){
 		playGame(3);
 	  });
 
-	  
-	  
-	  
-}
-
+	  document.getElementById('play-paper').addEventListener('click', function(){
+		playGame(2);
+	  });
+	}
