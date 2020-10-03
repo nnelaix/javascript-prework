@@ -81,10 +81,7 @@
 			printMessage('Błędna wartość. Wpisz numer 1, 2 lub 3');
 		
 		} 
-	}
-
-	printMessage('WYNIK: ' + displayResult(computerMove, playerMove));
-	  
+	}	  
 	  
 	  
 	}
