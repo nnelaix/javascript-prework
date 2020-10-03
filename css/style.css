@@ -2,22 +2,35 @@ body {
   background-color: pink;
 }
 
-button {
+.row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: row;
       flex-direction: row;
+}
+
+.btn {
   padding: 10px;
   margin: 10px auto 0 auto;
-  max-width: 40pxx;
+  max-width: 180pxx;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+  font-size: 28px;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
