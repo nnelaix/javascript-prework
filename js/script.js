@@ -3,7 +3,8 @@
 	
 		clearMessages(); 
 
-		function getMoveName(argMoveId){
+
+		const getMoveName = function(argMoveId){
 			if(argMoveId == 1){
 				return 'kamień';
 			} else if(argMoveId == 2){
@@ -22,7 +23,7 @@
 
 	console.log('Wylosowana liczba to: ' + randomNumber);
 
-	let computerMove = getMoveName(randomNumber);
+	const computerMove = getMoveName(randomNumber);
 
 	printMessage('Mój ruch to: ' + computerMove);
 
@@ -43,7 +44,7 @@
 
 	console.log('Gracz wpisał: ' + playerInput);
 
-	let playerMove = getMoveName(playerInput);
+	const playerMove = getMoveName(playerInput);
 	
 	printMessage('Twój ruch to: ' + playerMove);
 	/*
@@ -57,7 +58,7 @@
 	*/
 
 
-	function displayResult(argComputerMove, argPlayerMove){
+	const displayResult = function(argComputerMove, argPlayerMove){
 			printMessage('Zagrałem ' + argComputerMove + ', Twój ruch to ' + argPlayerMove);
 		if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
 			printMessage('Ty wygrywasz!');
